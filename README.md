@@ -7,18 +7,18 @@ This git repository helps you to send emails quickly and easily through SendGrid
 Running on OpenShift
 ----------------------------
 
-Create an SendGrid account at http://sendgrid.com/pricing.html
+Create an SendGrid account at http://sendgrid.com/user/signup
 
 Create an account at http://openshift.redhat.com/ and set up you local machine with the client tools.
 
 Create a php-5.3 application (you can call your application whatever you want)
 <pre>
-    rhc app create -a sendgrid -t php-5.3
+    rhc app create sendgrid -t php
 </pre>
 Add this upstream Sendgrid repo
 <pre>
     cd sendgrid
-    git remote add upstream -m master https://github.com/sendgrid/openshift-sendgrid-php
+    git remote add upstream -m master git://github.com/openshift-quickstart/sendgrid-openshift-quickstart.git
     git pull -s recursive -X theirs upstream master
 </pre>
 
