@@ -13,7 +13,7 @@ Create an account at http://openshift.redhat.com/ and set up you local machine w
 
 Create a php-5.3 application (you can call your application whatever you want)
 <pre>
-    rhc app create sendgrid -t php
+    rhc app create sendgrid php
 </pre>
 Add this upstream Sendgrid repo
 <pre>
