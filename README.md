@@ -11,15 +11,10 @@ Create an SendGrid account at http://sendgrid.com/user/signup
 
 Create an account at http://openshift.redhat.com/ and set up you local machine with the client tools.
 
-Create a php-5.3 application (you can call your application whatever you want)
+Create a php-5.3 application (you can call your application whatever you want) and change into the application directory.
 <pre>
-    rhc app create sendgrid php
-</pre>
-Add this upstream Sendgrid repo
-<pre>
+    rhc app create sendgrid php --from-code https://github.com/openshift/sendgrid-openshift-quickstart
     cd sendgrid
-    git remote add upstream -m master git://github.com/openshift-quickstart/sendgrid-openshift-quickstart.git
-    git pull -s recursive -X theirs upstream master
 </pre>
 
 ###Configuration###
@@ -53,3 +48,4 @@ That's it, you can now checkout your application at:
 For more details about SendGrid libray please read http://sendgrid.com/docs/Code_Examples/php.html
 
 You can create your Sendgrid Quickstart with other programming languages using the following examples: http://sendgrid.com/docs/Code_Examples/index.html
+
